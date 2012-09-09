@@ -7,9 +7,13 @@ namespace mixin.test
     [TestClass()]
     public class MSampleMixinTest
     {
+        public class SuperClass
+        {
+        }
+
         // example of including a simple mixin
         // notice that we don't define a field to store Foo
-        public class TestSample : MSampleMixin
+        public class TestSample : SuperClass, MSampleMixin
         {
         }
 

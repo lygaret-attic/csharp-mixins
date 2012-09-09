@@ -16,9 +16,15 @@ thereby getting much more useful "mixins" rather than simply extension methods.
 [TestClass()]
 public class MSampleMixinTest
 {
+	public class SuperClass
+	{
+	}
+
     // example of including a simple mixin
-    // notice that we don't define a field to store Foo
-    public class TestSample : MSampleMixin
+	// notice two things -
+	//    the MSampleMixin is not the super class, rather it's an interface
+	//    there are no fields or properties defined to store the Foo data for the mixin methods
+    public class TestSample : SuperClass, MSampleMixin
     {
     }
 
